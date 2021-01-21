@@ -22,7 +22,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>jdk javac不是内部命令和更改java_home后java -version还是寻找原来的路径 - 篮网总冠军</title>
+  <title>Mac 使用docker 安装oracle 11g - 篮网总冠军</title>
   
 
   
@@ -439,7 +439,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title">
-        jdk javac不是内部命令和更改java_home后java -version还是寻找原来的路径
+        Mac 使用docker 安装oracle 11g
       </h1>
       <div class='new-meta-box'>
         
@@ -463,7 +463,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Jan 21, 2021</p>
+    <p>发布于：Jan 22, 2021</p>
   </a>
 </div>
 
@@ -474,7 +474,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="jdk javac不是内部命令和更改java_home后java -version还是寻找原来的路径" data-path="/2021/01/21/example/">
+      <div id="lc-pv" data-title="Mac 使用docker 安装oracle 11g" data-path="/2021/01/22/mac%E5%80%9F%E5%8A%A9docker%E5%AE%89%E8%A3%85oracle/">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -492,10 +492,39 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
   
-  <h3 id="1、jdk安装完成，环境变量也配置完成，cmd输入java-version显示正常，但输入javac不是内部命令"><a href="#1、jdk安装完成，环境变量也配置完成，cmd输入java-version显示正常，但输入javac不是内部命令" class="headerlink" title="1、jdk安装完成，环境变量也配置完成，cmd输入java -version显示正常，但输入javac不是内部命令"></a>1、jdk安装完成，环境变量也配置完成，cmd输入java -version显示正常，但输入javac不是内部命令</h3><p>原因：安装过程中jdk的安装路径与jre安装路径相同，导致覆盖</p>
-<p>解决办法：卸载jdk，重新安装。将jre放入jdk的子目录jre中</p>
-<h3 id="2、重装jdk，更改java-home路径以后，输入javac显示正常，输入java和java-version还是寻找原来的路径"><a href="#2、重装jdk，更改java-home路径以后，输入javac显示正常，输入java和java-version还是寻找原来的路径" class="headerlink" title="2、重装jdk，更改java_home路径以后，输入javac显示正常，输入java和java -version还是寻找原来的路径"></a>2、重装jdk，更改java_home路径以后，输入javac显示正常，输入java和java -version还是寻找原来的路径</h3><p>原因：刚才第一次安装的jdk地址生成在C盘中</p>
-<p>解决办法：去C:\Windows\System32找到java、 javac、 javaw三个文件，删掉，重开下cmd再用java -version指令发现正常了。</p>
+  <h1 id="1下载docker"><a href="#1下载docker" class="headerlink" title="1下载docker"></a><strong><em>1下载docker</em></strong></h1><p>地址：<a target="_blank" rel="noopener" href="https://download.docker.com/mac/stable/Docker.dmg">点击下载docker</a></p>
+<p>点击 Docker.dmg安装</p>
+<p>打开终端，输入命令<code>docker version</code>查看docker版本，看是否安装成功：</p>
+<p><img src="https://img-blog.csdnimg.cn/20190710141533765.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzE2MzI2MQ==,size_16,color_FFFFFF,t_70" class="lazyload" data-srcset="https://img-blog.csdnimg.cn/20190710141533765.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzE2MzI2MQ==,size_16,color_FFFFFF,t_70" srcset="data:image/png;base64,666"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" title="点击并拖拽以移动">​</p>
+<p>启动台中找到docker，点击并启动</p>
+<p><img src="https://img-blog.csdnimg.cn/20190710141826396.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzE2MzI2MQ==,size_16,color_FFFFFF,t_70" class="lazyload" data-srcset="https://img-blog.csdnimg.cn/20190710141826396.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzE2MzI2MQ==,size_16,color_FFFFFF,t_70" srcset="data:image/png;base64,666"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" title="点击并拖拽以移动">​</p>
+<p><img src="https://img-blog.csdnimg.cn/20190710141918226.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzE2MzI2MQ==,size_16,color_FFFFFF,t_70" class="lazyload" data-srcset="https://img-blog.csdnimg.cn/20190710141918226.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzE2MzI2MQ==,size_16,color_FFFFFF,t_70" srcset="data:image/png;base64,666"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" title="点击并拖拽以移动">​</p>
+<h1 id="2下载安装oracle"><a href="#2下载安装oracle" class="headerlink" title="2下载安装oracle"></a><strong><em>2下载安装oracle</em></strong></h1><p>第一步：使用如下命令，搜索docker远程仓库的镜像：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker search docker-oracle-xe-11g</span><br></pre></td></tr></table></figure>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" title="点击并拖拽以移动"></p>
+<p><img src="https://img-blog.csdnimg.cn/20190710142207648.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzE2MzI2MQ==,size_16,color_FFFFFF,t_70" class="lazyload" data-srcset="https://img-blog.csdnimg.cn/20190710142207648.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzE2MzI2MQ==,size_16,color_FFFFFF,t_70" srcset="data:image/png;base64,666"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" title="点击并拖拽以移动">​</p>
+<p>第二步：下载oracle 11g，输入如下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull deepdiver&#x2F;docker-oracle-xe-11g</span><br></pre></td></tr></table></figure>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" title="点击并拖拽以移动"></p>
+<p>命令解释：</p>
+<p>pull 是docker容器的拉取命令；</p>
+<p>deepdiver/docker-oracle-xe-11g 为镜像的完整名字</p>
+<p>出现如下语句说明下载完成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Status: Downloaded newer image for deepdiver&#x2F;docker-oracle-xe-11g:latest</span><br></pre></td></tr></table></figure>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" title="点击并拖拽以移动"></p>
+<p>此时镜像已经下载下来了，使用 sudo docker images 查看已经下载的镜像</p>
+<p><img src="https://img-blog.csdnimg.cn/20190710143118442.png" class="lazyload" data-srcset="https://img-blog.csdnimg.cn/20190710143118442.png" srcset="data:image/png;base64,666"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" title="点击并拖拽以移动">​</p>
+<p>启动镜像为容器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -h &quot;oracle&quot; --name &quot;oracle&quot; -d -p 49160:22 -p 49161:1521 -p 49162:8080 deepdiver&#x2F;docker-oracle-xe-11g</span><br></pre></td></tr></table></figure>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" title="点击并拖拽以移动"></p>
+<p>49160端口被映射到容器的22端口，49161被映射带容器的1521端口，49162端口被映射到8080端口</p>
+<p>此时oracle已经下载安装完成，我们可以连接客户端操作数据库，默认账户为system，密码为oracle，端口为上一步的49161</p>
+<p><img src="https://img-blog.csdnimg.cn/20190710144509750.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzE2MzI2MQ==,size_16,color_FFFFFF,t_70" class="lazyload" data-srcset="https://img-blog.csdnimg.cn/20190710144509750.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzE2MzI2MQ==,size_16,color_FFFFFF,t_70" srcset="data:image/png;base64,666"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" title="点击并拖拽以移动">​</p>
+<p>登陆上去就可以使用sql语句创建用户和表空间，然后倒入语句了。</p>
+<p>oracle打开/停止命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker start oracle</span><br><span class="line">docker stop oracle</span><br></pre></td></tr></table></figure>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" title="点击并拖拽以移动"></p>
+<p>到这里就全部结束了</p>
 
   
   
@@ -513,7 +542,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               
-                <p>本文永久链接是：<a href=http://example.com/2021/01/21/example/>http://example.com/2021/01/21/example/</a></p>
+                <p>本文永久链接是：<a href=http://example.com/2021/01/22/mac%E5%80%9F%E5%8A%A9docker%E5%AE%89%E8%A3%85oracle/>http://example.com/2021/01/22/mac%E5%80%9F%E5%8A%A9docker%E5%AE%89%E8%A3%85oracle/</a></p>
               
             
           </blockquote>
@@ -530,10 +559,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-01-21T21:21:26+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-01-22T00:44:21+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Jan 21, 2021</p>
+    <p>更新于：Jan 22, 2021</p>
   </a>
 </div>
 
@@ -552,7 +581,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2021/01/21/example/&title=jdk javac不是内部命令和更改java_home后java -version还是寻找原来的路径 - 篮网总冠军&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2021/01/22/mac%E5%80%9F%E5%8A%A9docker%E5%AE%89%E8%A3%85oracle/&title=Mac 使用docker 安装oracle 11g - 篮网总冠军&summary="
           
           >
           
@@ -564,7 +593,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2021/01/21/example/&title=jdk javac不是内部命令和更改java_home后java -version还是寻找原来的路径 - 篮网总冠军&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2021/01/22/mac%E5%80%9F%E5%8A%A9docker%E5%AE%89%E8%A3%85oracle/&title=Mac 使用docker 安装oracle 11g - 篮网总冠军&summary="
           
           >
           
@@ -576,7 +605,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2021/01/21/example/&title=jdk javac不是内部命令和更改java_home后java -version还是寻找原来的路径 - 篮网总冠军&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2021/01/22/mac%E5%80%9F%E5%8A%A9docker%E5%AE%89%E8%A3%85oracle/&title=Mac 使用docker 安装oracle 11g - 篮网总冠军&summary="
           
           >
           
@@ -606,15 +635,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2021/01/22/mac%E5%80%9F%E5%8A%A9docker%E5%AE%89%E8%A3%85oracle/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Mac 使用docker 安装oracle 11g</p>
-          <p class='content'>1下载docker地址：点击下载docker
-点击 Docker.dmg安装
-打开终端，输入命令docker version查看docker版本，看是否安装成功：
-​
-启动台中找到docker，...</p>
+        <a class='prev' href='/2021/01/22/mac%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Mac常用快捷键</p>
+          <p class='content'>桌面应用常用快捷键1、桌面Command + Option（Win系统的Alt）+Esc：打开任务管理器
+command + 空格：聚焦搜索
+2、截图command + shift + 3：截取...</p>
         </a>
       
+      
+        <a class='next' href='/2021/01/21/example/'>
+          <p class='title'>jdk javac不是内部命令和更改java_home后java -version还是寻找原来的路径<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>1、jdk安装完成，环境变量也配置完成，cmd输入java -version显示正常，但输入javac不是内部命令原因：安装过程中jdk的安装路径与jre安装路径相同，导致覆盖
+解决办法：卸载j...</p>
+        </a>
       
     </div>
   
@@ -656,7 +689,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81jdk%E5%AE%89%E8%A3%85%E5%AE%8C%E6%88%90%EF%BC%8C%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E4%B9%9F%E9%85%8D%E7%BD%AE%E5%AE%8C%E6%88%90%EF%BC%8Ccmd%E8%BE%93%E5%85%A5java-version%E6%98%BE%E7%A4%BA%E6%AD%A3%E5%B8%B8%EF%BC%8C%E4%BD%86%E8%BE%93%E5%85%A5javac%E4%B8%8D%E6%98%AF%E5%86%85%E9%83%A8%E5%91%BD%E4%BB%A4"><span class="toc-text">1、jdk安装完成，环境变量也配置完成，cmd输入java -version显示正常，但输入javac不是内部命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E9%87%8D%E8%A3%85jdk%EF%BC%8C%E6%9B%B4%E6%94%B9java-home%E8%B7%AF%E5%BE%84%E4%BB%A5%E5%90%8E%EF%BC%8C%E8%BE%93%E5%85%A5javac%E6%98%BE%E7%A4%BA%E6%AD%A3%E5%B8%B8%EF%BC%8C%E8%BE%93%E5%85%A5java%E5%92%8Cjava-version%E8%BF%98%E6%98%AF%E5%AF%BB%E6%89%BE%E5%8E%9F%E6%9D%A5%E7%9A%84%E8%B7%AF%E5%BE%84"><span class="toc-text">2、重装jdk，更改java_home路径以后，输入javac显示正常，输入java和java -version还是寻找原来的路径</span></a></li></ol>
+        
     </div>
   </section>
 
@@ -675,7 +708,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="jdk javac不是内部命令和更改java_home后java -version还是寻找原来的路径";
+  pdata.postTitle="Mac 使用docker 安装oracle 11g";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 
