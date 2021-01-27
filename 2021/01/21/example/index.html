@@ -492,7 +492,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
   
-  <h3 id="1、jdk安装完成，环境变量也配置完成，cmd输入java-version显示正常，但输入javac不是内部命令"><a href="#1、jdk安装完成，环境变量也配置完成，cmd输入java-version显示正常，但输入javac不是内部命令" class="headerlink" title="1、jdk安装完成，环境变量也配置完成，cmd输入java -version显示正常，但输入javac不是内部命令"></a>1、jdk安装完成，环境变量也配置完成，cmd输入java -version显示正常，但输入javac不是内部命令</h3><p>原因：安装过程中jdk的安装路径与jre安装路径相同，导致覆盖</p>
+  <!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+<ul>
+<li><a href="#1jdk%E5%AE%89%E8%A3%85%E5%AE%8C%E6%88%90%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E4%B9%9F%E9%85%8D%E7%BD%AE%E5%AE%8C%E6%88%90cmd%E8%BE%93%E5%85%A5java--version%E6%98%BE%E7%A4%BA%E6%AD%A3%E5%B8%B8%E4%BD%86%E8%BE%93%E5%85%A5javac%E4%B8%8D%E6%98%AF%E5%86%85%E9%83%A8%E5%91%BD%E4%BB%A4">1、jdk安装完成，环境变量也配置完成，cmd输入java -version显示正常，但输入javac不是内部命令</a></li>
+<li><a href="#2%E9%87%8D%E8%A3%85jdk%E6%9B%B4%E6%94%B9java_home%E8%B7%AF%E5%BE%84%E4%BB%A5%E5%90%8E%E8%BE%93%E5%85%A5javac%E6%98%BE%E7%A4%BA%E6%AD%A3%E5%B8%B8%E8%BE%93%E5%85%A5java%E5%92%8Cjava--version%E8%BF%98%E6%98%AF%E5%AF%BB%E6%89%BE%E5%8E%9F%E6%9D%A5%E7%9A%84%E8%B7%AF%E5%BE%84">2、重装jdk，更改java_home路径以后，输入javac显示正常，输入java和java -version还是寻找原来的路径</a></li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+
+<h3 id="1、jdk安装完成，环境变量也配置完成，cmd输入java-version显示正常，但输入javac不是内部命令"><a href="#1、jdk安装完成，环境变量也配置完成，cmd输入java-version显示正常，但输入javac不是内部命令" class="headerlink" title="1、jdk安装完成，环境变量也配置完成，cmd输入java -version显示正常，但输入javac不是内部命令"></a>1、jdk安装完成，环境变量也配置完成，cmd输入java -version显示正常，但输入javac不是内部命令</h3><p>原因：安装过程中jdk的安装路径与jre安装路径相同，导致覆盖</p>
 <p>解决办法：卸载jdk，重新安装。将jre放入jdk的子目录jre中</p>
 <h3 id="2、重装jdk，更改java-home路径以后，输入javac显示正常，输入java和java-version还是寻找原来的路径"><a href="#2、重装jdk，更改java-home路径以后，输入javac显示正常，输入java和java-version还是寻找原来的路径" class="headerlink" title="2、重装jdk，更改java_home路径以后，输入javac显示正常，输入java和java -version还是寻找原来的路径"></a>2、重装jdk，更改java_home路径以后，输入javac显示正常，输入java和java -version还是寻找原来的路径</h3><p>原因：刚才第一次安装的jdk地址生成在C盘中</p>
 <p>解决办法：去C:\Windows\System32找到java、 javac、 javaw三个文件，删掉，重开下cmd再用java -version指令发现正常了。</p>
@@ -530,10 +540,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-01-21T21:21:26+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-01-27T10:31:44+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Jan 21, 2021</p>
+    <p>更新于：Jan 27, 2021</p>
   </a>
 </div>
 
@@ -608,11 +618,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/2021/01/22/mac%E5%80%9F%E5%8A%A9docker%E5%AE%89%E8%A3%85oracle/'>
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Mac 使用docker 安装oracle 11g</p>
-          <p class='content'>1下载docker地址：点击下载docker
-点击 Docker.dmg安装
-打开终端，输入命令docker version查看docker版本，看是否安装成功：
-​
-启动台中找到docker，...</p>
+          <p class='content'>
+
+Table of Contents  generated with DocToc
+
+1下载docker
+2下载安装oracle
+
+
+
+
+1下载docker地址：点击下载docker
+点击 D...</p>
         </a>
       
       
